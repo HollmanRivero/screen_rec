@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ScreenRec</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom title bar -->
+  <div class="titlebar">
+    <div class="titlebar-left">
+      <div class="app-dot"></div>
+      <span class="app-name">ScreenRec</span>
+    </div>
+    <div class="titlebar-controls">
+      <button id="btn-minimize" title="Minimize">&#8211;</button>
+      <button id="btn-close" title="Close">&#10005;</button>
+    </div>
+  </div>
+
+  <div class="layout">
+
+    <!-- Left panel: source picker -->
+    <div class="panel panel-left">
+      <h2 class="section-title">Select Source</h2>
+      <div id="source-list" class="source-list">
+        <div class="source-placeholder">Loading sources…</div>
+      </div>
+      <button id="btn-refresh" class="btn-secondary">&#8635; Refresh</button>
+
+      <h2 class="section-title" style="margin-top:24px">Audio</h2>
+      <label class="toggle-row">
+        <span>Microphone</span>
+        <div class="toggle-wrap">
+          <input type="checkbox" id="toggle-mic" checked />
+          <span class="toggle-slider"></span>
+        </div>
+      </label>
+      <label class="toggle-row">
+        <span>Desktop audio</span>
+        <div class="toggle-wrap">
+          <input type="checkbox" id="toggle-desktop-audio" checked />
+          <span class="toggle-slider"></span>
+        </div>
+      </label>
+
+      <h2 class="section-title" style="margin-top:24px">Camera Overlay</h2>
+      <label class="toggle-row">
+        <span>Enable webcam</span>
+        <div class="toggle-wrap">
+          <input type="checkbox" id="toggle-cam" />
+          <span class="toggle-slider"></span>
+        </div>
+      </label>
+      <label class="toggle-row">
+        <span>Show preview</span>
+        <div class="toggle-wrap">
+          <input type="checkbox" id="toggle-preview" checked />
+          <span class="toggle-slider"></span>
+        </div>
+      </label>
+
+      <h2 class="section-title" style="margin-top:24px">Output</h2>
+      <div class="format-row">
+        <label>Format</label>
+        <select id="select-format">
+          <option value="video/webm;codecs=vp9">WebM (VP9)</option>
+          <option value="video/webm;codecs=vp8">WebM (VP8)</option>
+          <option value="video/webm">WebM</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Right panel: preview + controls -->
+    <div class="panel panel-right">
+      <div class="preview-wrap">
+        <video id="preview-screen" autoplay muted playsinline></video>
+        <video id="preview-cam" autoplay muted playsinline class="cam-pip hidden"></video>
+        <div id="preview-placeholder" class="preview-placeholder">
+          <div class="placeholder-icon">&#9654;</div>
+          <p>Select a source to preview</p>
+        </div>
+        <div id="rec-badge" class="rec-badge hidden">
+          <span class="rec-dot"></span> REC
+        </div>
+        <div id="timer" class="timer hidden">00:00</div>
+      </div>
+
+      <div class="controls">
+        <button id="btn-record" class="btn-record" disabled>
+          <span class="btn-record-icon">&#9679;</span>
+          <span id="btn-record-label">Start Recording</span>
+        </button>
+        <div id="status" class="status">No source selected</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
