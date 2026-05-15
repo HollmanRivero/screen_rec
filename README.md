@@ -1,58 +1,37 @@
-# screen_rec
+# CCAMX
 
-A lightweight screen recorder built with Electron. Record any screen or window, mix in your webcam as a draggable picture-in-picture overlay, and capture microphone and desktop audio — all saved as MP4.
+**A modern group communication app built for people who want to stay connected.**
 
-## Features
+---
 
-- **Screen & window selection** — pick any monitor or open window with live thumbnails
-- **Webcam overlay** — enable your camera as a draggable PiP that gets burned into the recording
-- **Audio mixing** — record microphone, desktop/system audio, or both simultaneously
-- **MP4 output** — recordings are automatically converted from WebM to MP4 via FFmpeg
-- **Live timer** — on-screen recording duration counter
-- **Frameless UI** — clean custom title bar with minimize and close controls
+## About Me
 
-## Requirements
+Hi, I'm River — currently pursuing a **Master's in Full-Stack Development** at **Conquer Blocks Academy** in Spain. CCAMX is a passion project where I apply what I learn and push myself to explore advanced communication technologies.
 
-- [Node.js](https://nodejs.org) (v18 or later recommended)
-- Windows (desktop audio loopback is Windows-specific)
+## What is CCAMX?
 
-## Getting Started
+CCAMX is a real-time communication app designed for groups that want to stay in touch. Think of it as a walkie-talkie reimagined for the modern era — built on advanced streaming and audio technology.
 
-```bash
-# Clone the repo
-git clone https://github.com/HollmanRivero/screen_rec.git
-cd screen_rec
+**What it does well today:**
+- Seamless real-time voice communication within groups
+- Reliable performance for teams, friends, and communities who want a persistent connection
+- Built with a modern, efficient tech stack (Kotlin / Android Studio)
 
-# Install dependencies
-npm install
+**What's coming next:**
+- Solo broadcasting — right now the app shines in group settings, but one-to-many broadcasting and open channel support are on the roadmap
+- A cross-platform rebuild using Flutter, targeting Android, iOS, and Windows from a single codebase
 
-# Run the app
-npm start
-```
+## Looking for a Mentor / Sponsor
 
-Or launch directly via `ScreenRec.bat` if you have the shortcut set up.
+I'm actively looking for a **mentor or sponsor** who believes in this project and wants to help guide it forward. Whether that's technical mentorship, industry advice, or sponsorship to support continued development — I'd love to hear from you.
 
-## Usage
+If you're interested, feel free to reach out via GitHub or open an issue to start a conversation.
 
-1. Click **Refresh** to load available screens and windows
-2. Click a source thumbnail to select it — a live preview will appear
-3. Toggle **Camera**, **Mic**, and **Desktop Audio** as needed
-4. Click **Start Recording**
-5. Click **Stop Recording** when done — a save dialog will open to choose where to save the MP4
+## Status
 
-### Webcam PiP
+> ⚠️ **This app is under active development.**
+> Features may change, break, or evolve as the project grows. Contributions, feedback, and patience are all appreciated.
 
-When the camera is enabled, the webcam overlay can be dragged anywhere inside the preview area. Its position at the time you start recording is what gets composited into the final video.
+---
 
-## Tech Stack
-
-| Layer | Library |
-|---|---|
-| App shell | [Electron](https://www.electronjs.org/) |
-| Video conversion | [ffmpeg-static](https://github.com/eugeneware/ffmpeg-static) |
-| Screen capture | Electron `desktopCapturer` + `getDisplayMedia` |
-| Cam/mic mixing | Web `AudioContext` + Canvas 2D |
-
-## License
-
-ISC
+*Built with ambition and late nights by River.*
