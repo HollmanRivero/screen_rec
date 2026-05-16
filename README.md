@@ -6,7 +6,7 @@
 
 ## About Me
 
-Hi, I'm River — currently pursuing a **Master's in Full-Stack Development** at **Conquer Blocks Academy** in Spain. CCAMX is a passion project where I apply what I learn and push myself to explore advanced communication technologies.
+Hi, I'm Hollman Rivero — currently pursuing a **Master's in Full-Stack Development** at **Conquer Blocks Academy** in Spain. CCAMX is a passion project where I apply what I learn and push myself to explore advanced communication technologies.
 
 ## What is CCAMX?
 
